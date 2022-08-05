@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ToolbarStyle">
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="android:background">?colorControlNormal</item>
+        <item name="android:theme">@style/Theme.PDFReader</item>
+        <item name="android:iconTint">@color/gray_50</item>
+        <item name="titleTextAppearance">@style/CustomTitleTextAppearance</item>
+    </style>
+</resources>

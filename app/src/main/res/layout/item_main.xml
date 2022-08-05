@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="PdfModel"
+            type="java.io.File" />
+        <variable
+            name="onClickListener"
+            type="com.yvtechnologies.pdfreader.listeners.MainRecyclerClick" />
+        <variable
+            name="Position"
+            type="int" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="70dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="1dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:onClick="@{()->onClickListener.onItemClick(Position)}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:layout_margin="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/pdf" />
+
+            <TextView
+                android:id="@+id/tv_title_pdf"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:text="@{PdfModel.name}"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/iv_edit"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_date_size"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:loadText="@{PdfModel}"
+                app:layout_constraintEnd_toEndOf="@+id/tv_title_pdf"
+                app:layout_constraintStart_toStartOf="@+id/tv_title_pdf"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_pdf" />
+
+            <ImageView
+                android:id="@+id/iv_edit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:tint="@color/gray"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:onClick="@{()->onClickListener.onEditClick(Position)}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_more_vert" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,48 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.yvtechnologies.pdfreader"
+        minSdkVersion 23
+        targetSdkVersion 30
+        versionCode 4
+        versionName "1.0.3"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+
+
+}
+
+dependencies {
+
+    implementation "androidx.appcompat:appcompat:${versions.appCompat}"
+    implementation "com.google.android.material:material:${versions.materialDesign}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}"
+    implementation "com.github.barteksc:android-pdf-viewer:3.2.0-beta.1"
+    implementation "com.google.firebase:firebase-analytics:${versions.fireBaseAnalytics}"
+    implementation "com.google.firebase:firebase-crashlytics:${versions.firebaseCrashlytics}"
+    compile 'com.facebook.android:audience-network-sdk:6.+'
+}

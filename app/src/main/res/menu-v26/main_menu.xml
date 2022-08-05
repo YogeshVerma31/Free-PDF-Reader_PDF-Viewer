@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <item
+        android:id="@+id/ic_menu_sort"
+        android:icon="@drawable/ic_sort"
+        android:title="sort"
+        app:showAsAction="ifRoom|collapseActionView">
+        <menu>
+            <item
+                android:id="@+id/menu_byname"
+                android:title="Sort By Name" >
+                <menu>
+                    <item
+                        android:id="@+id/menu_atoz"
+                        android:title="A To Z" />
+
+                    <item
+                        android:id="@+id/menu_ztoa"
+                        android:title="Z To A" />
+
+                </menu>
+            </item>
+            <item
+                android:id="@+id/menu_bydate"
+                android:title="Sort By Date"/>
+            <item
+                android:id="@+id/menu_bysize"
+                android:title="Sort By Size">
+                <menu>
+                    <item
+                        android:id="@+id/menu_ascending"
+                        android:title="Ascending order" />
+
+                    <item
+                        android:id="@+id/menu_desending"
+                        android:title="Descending order" />
+
+                </menu>
+            </item>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/ic_menu_search"
+        android:icon="@drawable/ic_search"
+        android:title="search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/ic_menu_more"
+        android:icon="@drawable/ic_more_vert"
+        android:title="more"
+        app:showAsAction="ifRoom|collapseActionView" />
+</menu>

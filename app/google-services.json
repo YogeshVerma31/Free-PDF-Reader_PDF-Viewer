@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "573207167067",
+    "project_id": "pdf-reader-33da0",
+    "storage_bucket": "pdf-reader-33da0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573207167067:android:cc94a0b4028671dfae7f7e",
+        "android_client_info": {
+          "package_name": "com.yvtechnologies.pdfreader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573207167067-h28gn0h5j9skhu2msdcqfnrt90s5ckvb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBg1qb07OwiArfqeBxtK37xtuWIfsD9j9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573207167067-h28gn0h5j9skhu2msdcqfnrt90s5ckvb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
